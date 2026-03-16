@@ -39,6 +39,162 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .radio-group { display: flex; gap: 15px; margin-top: 5px; }
+        .radio-item { display: flex; align-items: center; gap: 5px; }
+        .radio-item input { width: auto; }
+
+        .submit-section {
+            border-top: 1px solid #ddd;
+            margin-top: 25px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .btn-group { display: flex; justify-content: center; margin-top: 15px; }
+        
+        button {
+            width: 100%; /* Changed to full width since there is only one button */
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-yes { background-color: #28a745; color: white; }
+        button:hover { opacity: 0.8; transform: translateY(-2px); }
+
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Royal Hospital Services</h1>
+    <p class="subtitle">Sperm Donation Registration</p>
+
+    <form id="donationForm">
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex: 1;">
+                <label>Date of Birth</label>
+                <input type="date" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 00000-00000">
+        </div>
+
+        <div class="form-group">
+            <label>Sex</label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Sperm (ml) & Pricing</label>
+            <select>
+                <option value="10">10ml - ₹1,800</option>
+                <option value="20">20ml - ₹2,500</option>
+                <option value="30">30ml - ₹5,000</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Referral Srinivas TV</label>
+            <input type="text" placeholder="Donars Name">
+        </div>
+
+        <div class="form-group">
+            <label>Tools for Method</label>
+            <div class="radio-group">
+                <div class="radio-item"><input type="radio" name="tool" value="hand"> Hand</div>
+                <div class="radio-item"><input type="radio" name="tool" value="machine"> Machine</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Storage Choice</label>
+            <select>
+                <option>Cover</option>
+                <option>Box</option>
+                <option>Container</option>
+            </select>
+        </div>
+
+        <div class="submit-section">
+            <p><strong>Confirm your submission</strong></p>
+            <div class="btn-group">
+                <button type="submit" class="btn-yes">Submit Donation</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    // Logic to handle the alert box
+    document.getElementById('donationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Stops the page from reloading
+        alert("Thank you for your donation!");
+    });
+</script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Donation Form</title>
+    <style>
+        body {
+            /* Background image of a hospital */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 { text-align: center; color: #cc0000; margin-bottom: 5px; }
+        p.subtitle { text-align: center; margin-bottom: 25px; color: #666; font-weight: bold; }
+
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             box-sizing: border-box; /* Crucial for Mac/VS Code layouts */
         }
 
@@ -146,4 +302,4 @@
 </div>
 
 </body>
-</html>
+</html> -->
